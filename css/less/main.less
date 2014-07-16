@@ -1,0 +1,193 @@
+@import "params.less";
+
+html {
+	height: auto;
+	width: auto;
+}
+body{
+	font-family:'PT Sans',Arial,sans-serif;
+	color:#333;
+	font-size:1em;
+	line-height:1.8;
+	background:#eee;
+	height: auto;
+}
+img{
+	max-width:100%;
+	height:auto
+}
+a:link,a:visited{
+	color:#12BEBD;
+	text-decoration:none;
+	outline:0;
+	-webkit-transition:all 200ms ease-in;
+	-o-transition:all 200ms ease-in;
+	-moz-transition:all 200ms ease-in
+}
+a:active,a:hover{
+	color:#666;
+	text-decoration:none
+}
+a img{
+	border:0
+}
+label,p{
+	font-size:1.5em
+}
+h1,h2,h3,h4,h5,h6{
+	font-family:'PT Sans',Arial,sans-serif;
+	font-weight:700
+}
+h1{
+	letter-spacing:-.02em;
+	font-size:3.8em;
+	line-height:50px
+}
+hr{
+	border:0;
+	position:relative;
+	background:rgba(0,0,0,.05);
+	height:3px;
+	margin:0 0 40px
+}
+::-moz-selection{
+	background:#12BEBD;
+	text-shadow:none
+}
+::selection{
+	background:#12BEBD;
+	text-shadow:none
+}
+.pagination>.active>a,.pagination>.active>a:focus,.pagination>.active>a:hover,.pagination>.active>span,.pagination>.active>span:focus,.pagination>.active>span:hover{
+	color:#fff;
+	background-color:#12BEBD;
+	border-color:#12BEBD
+}
+.pagination>li>a,.pagination>li>span{
+	border:1px solid #eee
+}
+.form-control{
+	display:block;
+	width:100%;
+	height:34px;
+	padding:6px 12px;
+	font-size:14px;
+	line-height:1.428571429;
+	vertical-align:middle;
+	background-image:none;
+	border-radius:4px;
+	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s
+}
+.form-horizontal button{
+	margin-top:15px
+}
+
+.control-group.error input,.control-group.error select,.control-group.error textarea{
+	border:2px solid #b94a48!important
+}
+.control-group.error .checkbox,.control-group.error .radio,.control-group.error input,.control-group.error select,.control-group.error textarea{
+	color:#b94a48
+}
+
+
+
+
+@import "btn.less";
+@import "nav.less";
+@import "welcome.less";
+@import "about.less";
+@import "contact.less";
+@import "blog.less";
+
+
+
+
+#top-button {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	top: 50px;
+	z-index: 9999;
+	a {
+		display: none;
+		text-decoration: none;
+		-webkit-transition: .3s linear;
+		-moz-transition: all .3s linear;
+		transition: all .3s linear;
+		background: #1F788E;
+		opacity: 0.1;
+		line-height: 50%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		i {
+			color: #fff;
+			font-size: 14px;
+			padding: 8px 9px 5px 9px;
+			-webkit-transition: all .3s linear;
+			-moz-transition: all .3s linear;
+			transition: all .3s linear;
+			background: #1F788E;
+		}
+		&:hover {
+			opacity: 0.5;
+			background: #12bebd;
+			i {
+				background: #12bebd;
+			}
+		}
+	}
+}
+@media only screen and (max-width:991px){
+	h1{
+		font-size:3em
+	}
+	p{
+		font-size:1.3em
+	}
+	.nav-pills>li,.navbar-nav{
+		font-size:1.5em
+	}
+}
+@media only screen and (max-width:767px) and (min-width:480px){
+	h1{
+		font-size:3em
+	}
+	p{
+		font-size:1.3em
+	}
+	.navbar-nav{
+		font-size:1.5em
+	}
+	
+	#top-button { 
+		display: none;
+	}
+}
+@media only screen and (max-width:479px){
+	h1{
+		font-size:3em;
+		line-height:1.3em
+	}
+	p{
+		font-size:1.3em
+	}
+	.btn-default,.btn-primary{
+		font-size:1.2em
+	}
+	#top-button { 
+		display: none;
+	}
+	.navbar-nav{
+		font-size:1.3em
+	}
+	.nav-pills{
+		text-align:center
+	}
+	.nav-pills>li{
+		font-size:1.3em
+	}
+}
