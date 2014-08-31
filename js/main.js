@@ -53,6 +53,6 @@ $(document).ready(function(){
 				});
 		}
 	});
-	$(window).resize(fullscreen.resize.bind(fullscreen));
+	//$(window).resize(fullscreen.resize.bind(fullscreen));
 	fullscreen.resize();
 });
