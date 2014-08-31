@@ -6,20 +6,52 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Mkusher's Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css' async="true">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' async="true">
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="favicon.png" type="image/png">
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- Fonts from Font Awsome -->
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css" async="true">
 	<!-- CSS Animate -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Custom styles for this theme -->
 	<link rel="stylesheet" href="css/main.css">
 	<!-- Feature detection -->
 	<script src="js/modernizr-2.js"></script>
+	<script type="text/javascript">
+	function Fullscreen(){
+		var blocks = '.fullscreen';
+		var previousHeight = $(window).height();
+		
+		this.preResize = function(){
+			var mainBlock = $(blocks+'[data-ratio="1"]');
+			$(blocks).each(function(){
+				var blockRatio = $(this).data('ratio');
+				var newHeight;
+				if(blockRatio && blockRatio != 1)
+					newHeight = mainBlock.height() * blockRatio ;
+				else return;
+				$(this).css({height: newHeight + 'px'});
+			});
+		}
+		this.resize = function() {
+			var currentHeight = $(window).height();
+			$(blocks).each(function(){
+				var blockHeight = $(this).height();
+				var blockRatio = $(this).data('ratio');
+				var newHeight;
+				if(!blockRatio)
+					newHeight = blockHeight/previousHeight * currentHeight;
+				else
+					newHeight = currentHeight * blockRatio ;
+				$(this).css({height: newHeight + 'px'}).removeClass('fullscreen-unloaded');
+			});
+			previousHeight = currentHeight;
+		}
+	}
+	</script>
 </head>
 <body>
 	<!-- Nav starts -->
@@ -49,7 +81,7 @@
 		</div>
 	</div><!-- Nav ends -->
 	<!-- welcome section begins -->
-	<section id="welcome-section" class="welcome-section fullscreen" data-ratio="1">
+	<section id="welcome-section" class="welcome-section fullscreen fullscreen-unloaded" data-ratio="1">
 		<div class="parallax">
 			<img id="welcome-portrait" src="images/portrait.jpg" class="img-circle fullscreen" data-ratio="0.7" />
 			<h3 id="welcome-fullname" class="bounceInDown animated">Hello, I am Aleh Kashnikau.</h3>
@@ -123,6 +155,11 @@ $("#main-menu").onePageNav({
 	scrollOffset:40,
 	filter:"",
 	easing:"swing"
+});
+var fullscreener = new Fullscreen();
+fullscreener.preResize();
+$(window).load(function(){
+	fullscreener.resize();
 });
 $(function(){
 	$(window).scroll(function(){

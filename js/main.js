@@ -1,23 +1,3 @@
-function Fullscreen(){
-	var blocks = '.fullscreen';
-	var previousHeight = $(window).height();
-
-	this.resize = function() {
-		var currentHeight = $(window).height();
-		$(blocks).each(function(){
-			var blockHeight = $(this).height();
-			var blockRatio = $(this).data('ratio');
-			var newHeight;
-			if(!blockRatio)
-				newHeight = blockHeight/previousHeight * currentHeight;
-			else
-				newHeight = currentHeight * blockRatio ;
-			$(this).css({height: newHeight + 'px'});
-		});
-		previousHeight = currentHeight;
-	}
-}
-
 $(document).ready(function(){
 	var topbutton = $("#top-button a");
 	var welcomeSection = $("#welcome-section");
@@ -25,7 +5,6 @@ $(document).ready(function(){
 	var className = "minified";
 	var topButtonShowHeight = welcomeSection.height.bind(welcomeSection);
 	var navbarShowHeight = welcomeSection.height.bind(welcomeSection);
-	var fullscreen = new Fullscreen;
 	
 	topbutton.click(function(){
 		$("html, body").animate({scrollTop:0},"slow");
@@ -53,6 +32,4 @@ $(document).ready(function(){
 				});
 		}
 	});
-	//$(window).resize(fullscreen.resize.bind(fullscreen));
-	fullscreen.resize();
 });
