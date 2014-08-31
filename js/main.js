@@ -12,10 +12,10 @@ $(document).ready(function(){
 	});
 	$(window).scroll(function(){
 		
-		if($(document).scrollTop()>navbarShowHeight() && !navbar.hasClass(className)) {
+		if($(document).scrollTop()>navbarShowHeight() * 0.7 && !navbar.hasClass(className)) {
 			navbar.addClass(className);
 		}
-		else if(navbar.hasClass(className) && $(document).scrollTop()<navbarShowHeight()){
+		else if(navbar.hasClass(className) && $(document).scrollTop()<navbarShowHeight() * 0.7){
 			navbar.removeClass(className);
 		}
 		
