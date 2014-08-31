@@ -12,21 +12,14 @@
 	display:inline-block;
 	position:fixed;
 	color:#fff;
-	padding: 5px 0;
+	padding: 0;
 	-webkit-transition:all .3s;
 	-moz-transition:all .3s;
 	transition:all .3s;
+	opacity: 0;
 	
 	&.minified {
-		padding: 0;
-		.navbar-brand {
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-		.navbar-nav > li > a {
-			padding-top:15px;
-			height: 45px;
-		}
+		opacity: 1;
 	}
 	
 	a {
@@ -46,8 +39,8 @@
 		
 		& > li { 
 			& > a{
-				padding-top:20px;
-				height:50px;
+				padding-top: 15px;
+				height: 45px;
 				color:#fff;
 				&:active, &:hover, &:focus {
 					color:#12bebd
@@ -64,7 +57,7 @@
 	}
 	.navbar-brand{
 		color:#fff;
-		margin: 5px 0;
+		margin: 0;
 		font-size: 30px;
 		font-family: "Arimo",sans-serif;
 		line-height: 40px;

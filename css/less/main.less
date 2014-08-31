@@ -20,13 +20,16 @@ a:link,a:visited{
 	color:#12BEBD;
 	text-decoration:none;
 	outline:0;
-	-webkit-transition:all 200ms ease-in;
-	-o-transition:all 200ms ease-in;
-	-moz-transition:all 200ms ease-in
 }
 a:active,a:hover{
 	color:#666;
 	text-decoration:none
+}
+a, a:link, a:visited {
+	transition: all .3s ease-in;
+	-webkit-transition:all 300ms ease-in;
+	-o-transition:all 300ms ease-in;
+	-moz-transition:all 300ms ease-in;
 }
 a img{
 	border:0
@@ -92,6 +95,9 @@ hr{
 	color:#b94a48
 }
 
+.fullscreen {
+	position: relative;
+}
 
 
 
@@ -101,9 +107,6 @@ hr{
 @import "about.less";
 @import "contact.less";
 @import "blog.less";
-
-
-
 
 #top-button {
 	position: fixed;

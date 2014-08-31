@@ -49,14 +49,12 @@
 		</div>
 	</div><!-- Nav ends -->
 	<!-- welcome section begins -->
-	<section id="welcome-section" class="welcome-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 col-xs-12 parallax">
-					<h3 class="bounceInDown animated">Hello, I am Aleh Kashnikau.</h3>
-					<p class="bounceInLeft animated">Just another Web Artisan</p>
-				</div>
-			</div>
+	<section id="welcome-section" class="welcome-section fullscreen jumbotron" data-ratio="1">
+		<div class="parallax">
+			<img id="welcome-portrait" src="images/portrait.png" class="img-circle fullscreen" data-ratio="0.7" />
+			<h3 id="welcome-fullname" class="bounceInDown animated">Hello, I am Aleh Kashnikau.</h3>
+			<p id="welcome-title" class="bounceInLeft animated">Just another Web Artisan</p>
+			<a id="welcome-next" href="#" class="btn btn-default">See more <i class="fa fa-arrow-down fa-lg"></i></a>
 		</div>
 	</section><!-- welcome section ends -->
 	<!-- about section begins -->
@@ -128,17 +126,28 @@ $("#main-menu").onePageNav({
 });
 $(function(){
 	$(window).scroll(function(){
-		var speed = 0.6, top = $(this).scrollTop(), y = top*speed, block = $("#welcome-section .parallax");
+		var speed = 0.6, 
+			top = $(this).scrollTop(), 
+			y = top*speed, 
+			block = $("#welcome-section .parallax"),
+			height = block.height(),
+			opacity = (1 - y/height);
+		if(opacity < 0.1) opacity = 0.09;
 		if(top > 0) {
 			block.css({
-				position: 'relative',
 				top: y + 'px',
-				opacity: (1 - y/150)
+				opacity: opacity
 			});
 		}
 		else {
-			block.css({position: 'static', opacity: 1});
-			}
+			block.css({top: '0px', opacity: 1});
+		}
+	});
+	$("#welcome-next").click(function(){
+		var height = $("#welcome-section").outerHeight();
+		$("html, body").animate({
+			scrollTop:height
+		},"slow");
 	})
 });
 </script>

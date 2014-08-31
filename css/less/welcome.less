@@ -9,22 +9,49 @@
 	background-image: linear-gradient(rgba(255, 255, 255, .2) 50%, transparent 50%, transparent);
 	background-size: 18px 18px;
 	overflow: hidden;
+	min-height: 475px;
+	h3{
+		color:#eee;
+		margin-bottom: 5px;
+		
+	}
+	p{
+		font-size:1.6em;
+		margin: 0;
+		color:#fff
+	}
+	.parallax {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+		padding: 2%;
+		#welcome-portrait{
+			border: 8px solid white;
+			min-height: 300px;
+			height: 300px;
+		}
+	}
+	.btn {
+		
+		transition: all .3s ease-in;
+		-webkit-transition:all 300ms ease-in;
+		-o-transition:all 300ms ease-in;
+		-moz-transition:all 300ms ease-in;
+		color: #fff;
+		&:hover {
+			color: #fff;
+		}
+	}
 }
 .row{
 	margin-left:0;
 	margin-right:0
 }
-.welcome-section h3{
-	color:#eee;
-	margin-bottom: 5px;
-	
-}
-.welcome-section p{
-	font-size:1.6em;
-	margin: 0;
-	color:#fff
-}
 .about-section{
 	padding:45px 0;
-	background:#fff
+	background:#fff;
+	box-shadow: 0 5px 10px rgba(0,0,0,.2);
 }
