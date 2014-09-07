@@ -72,9 +72,10 @@
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav" id="main-menu">
 							<li class="active"><a href="/#navbar-wrapper">Home</a></li>
-							<li><a href="blog.html">Blog</a></li>
 							<li><a href="/#about-section">About</a></li>
+							<li><a href="/#projects-section">Projects</a></li>
 							<li><a href="/#contact-section">Contact</a></li>
+							
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -91,48 +92,71 @@
 		</div>
 	</section><!-- welcome section ends -->
 	<!-- about section begins -->
-	<section id="about-section">
-		<div class="container about-section">
-			<div class="row">
-				<div class="col-md-offset-1 col-md-10  col-xs-12">
-					<h1>Who am I?</h1>
-					<p>I'm just a guy who wants to create great web apps with interactive design, cool UI/UX. I'd prefer to work on apps with real-time sync, collaborative work, complex logic divided into multiple services. </p>
-				</div>
-				<div class="col-md-offset-1 col-md-10 col-xs-12">
-					<h1>About Me</h1>
-					<p>I've developed several apps and paticipated in development of open-source forum engine. I have experience in PHP5(Symfony2, Yii, Silex, Doctrine2), Javascript(jQuery, Backbone.js, Angular.js, Node.js, Socket.io), Python, Ruby, C++(Qt).</p>
-					<p>Currently I'm working on social browser on-line game <a href="http://politiya.ru" target="_blank">Politiya.ru</a></p>
-				</div>
+	<section id="about-section" class="about-section">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-10  col-xs-12">
+				<h1>Who am I?</h1>
+				<p>I'm just a guy who wants to create great web apps with interactive design, cool UI/UX. I'd prefer to work on apps with real-time sync, collaborative work, complex logic divided into multiple services. </p>
+			</div>
+			<div class="col-md-offset-1 col-md-10 col-xs-12">
+				<h1>About Me</h1>
+				<p>I've developed several apps and paticipated in development of open-source forum engine. I have experience in PHP5(Symfony2, Yii, Silex, Doctrine2), Javascript(jQuery, Backbone.js, Angular.js, Node.js, Socket.io), Python, Ruby, C++(Qt).</p>
+				<p>Currently I'm working on social browser on-line game <a href="http://politiya.ru" target="_blank">Politiya.ru</a></p>
 			</div>
 		</div>
 	</section>
 	<!-- about section ends -->
-	<!-- contact section begins -->
-	<section id="contact-section">
-		<div class="container contact-section">
-			<div class="row">
-				<div class="col-md-offset-1 col-md-4 col-xs-12 contact-info">
-					<h3>Contact Info</h3>
-					<p><i class="fa fa-phone"></i> +375 (33) 635-32-85 </p>
-					<p><i class="fa fa-envelope-o"></i> <a href="mailto:aleh.kashnikau@gmail.com?Subject=blog" target="_top">aleh.kashnikau@gmail.com</a></p>
-					<p><i class="fa fa-skype"></i> <a href="skype:mkusher" target="_top">mkusher</a></p>
-					<p><i class="fa fa-external-link"></i> <a target="_blank" href="http://politiya.ru/">politiya.ru</a></p>
-				</div>
-				<div class="col-md-offset-1 col-md-5 col-xs-12">
-					<h3>Let's Connect</h3>
-					<div class="social-icons">
-						<a target="_blank" href="https://vk.com/mkusher" class="btn btn-round btn-clear btn-vk"><i class="fa fa-vk"></i></a>
-						<a target="_blank" href="https://twitter.com/AlehKashnikau" class="btn btn-round btn-clear btn-twitter"><i class="fa fa-twitter"></i></a>
-						<a target="_blank" href="https://github.com/mkusher" class="btn btn-round btn-clear btn-github"><i class="fa fa-github"></i></a>
-					</div>
-					<div class="social-icons">
-						<a target="_blank" href="http://www.linkedin.com/pub/aleh-kashnikau/21/294/675/" class="btn btn-round btn-clear btn-linkedin"><i class="fa fa-linkedin"></i></a>
-						<a target="_blank" href="https://www.facebook.com/aleh.kashnikau" class="btn btn-round btn-clear btn-facebook"><i class="fa fa-facebook"></i></a>
-						<a target="_blank" href="https://plus.google.com/+AlehKashnikau" class="btn btn-round btn-clear btn-google"><i class="fa fa-google-plus"></i></a>
-					</div>
-				</div>
-			</div><!-- End row -->
+	<section id="projects-section" class="projects-section">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-10  col-xs-12">
+				<h2>My Projects</h2>
+			</div>
 		</div>
+		
+		<div class="row">
+			<div class="col-md-offset-1 col-md-5 col-xs-12 project animated fadeIn">
+				<img src="images/projects/politiya.game.png" class="center-block img-responsive" />
+				<h3 class="text-center">Politiya.ru Game</h3>
+				<p>Political and economical strategy with integrated social network. My responsibilities / achievements: developed architecture, main api server, synchronization server and front-end app. I've used: PHP5, Symfony2, Doctrine2, Twig, Node.js, Socket.io, underscore.js, Backbone.js, RabbitMQ</p>
+			</div>
+			<div class="col-md-5 col-xs-12 animated fadeIn project">
+				<img src="images/projects/politiya.media.png" class="center-block img-responsive" />
+				<h3 class="text-center">Politiya.ru Media</h3>
+				<p>Media website. My responsibilities: developed front-office and back-office. Front-office is an usual php-mysql app built on Yii2, that renders all content on server. Back-office is an angular.js app that uses RESTFul web services built on Yii2. I've used: PHP5, Yii2, Angular.js, Gulp</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-offset-1 col-md-5 col-xs-12 project animated fadeIn">
+				<img src="images/projects/directorsclub.png" class="center-block img-responsive" />
+				<h3 class="text-center">Director's club</h3>
+				<p>Belarussian top-managers community portal. Includes forum, billboard, social network functions and blogs. My responsibilities: developed front-office and back-office. App is built on Yii Framework.</p>
+			</div>
+		</div>
+	</section>
+	<!-- contact section begins -->
+	<section id="contact-section" class="contact-section">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-4 col-xs-12 contact-info">
+				<h3>Contact Info</h3>
+				<p><i class="fa fa-phone"></i> +375 (33) 635-32-85 </p>
+				<p><i class="fa fa-envelope-o"></i> <a href="mailto:aleh.kashnikau@gmail.com?Subject=blog" target="_top">aleh.kashnikau@gmail.com</a></p>
+				<p><i class="fa fa-skype"></i> <a href="skype:mkusher" target="_top">mkusher</a></p>
+				<p><i class="fa fa-external-link"></i> <a target="_blank" href="http://politiya.ru/">politiya.ru</a></p>
+			</div>
+			<div class="col-md-offset-1 col-md-5 col-xs-12">
+				<h3>Let's Connect</h3>
+				<div class="social-icons">
+					<a target="_blank" href="https://vk.com/mkusher" class="btn btn-round btn-clear btn-vk"><i class="fa fa-vk"></i></a>
+					<a target="_blank" href="https://twitter.com/AlehKashnikau" class="btn btn-round btn-clear btn-twitter"><i class="fa fa-twitter"></i></a>
+					<a target="_blank" href="https://github.com/mkusher" class="btn btn-round btn-clear btn-github"><i class="fa fa-github"></i></a>
+				</div>
+				<div class="social-icons">
+					<a target="_blank" href="http://www.linkedin.com/pub/aleh-kashnikau/21/294/675/" class="btn btn-round btn-clear btn-linkedin"><i class="fa fa-linkedin"></i></a>
+					<a target="_blank" href="https://www.facebook.com/aleh.kashnikau" class="btn btn-round btn-clear btn-facebook"><i class="fa fa-facebook"></i></a>
+					<a target="_blank" href="https://plus.google.com/+AlehKashnikau" class="btn btn-round btn-clear btn-google"><i class="fa fa-google-plus"></i></a>
+				</div>
+			</div>
+		</div><!-- End row -->
 	</section><!-- contact section ends -->
 	<div id="top-button">
 		<a href="#navbar-wrapper" title="Back to the top">
