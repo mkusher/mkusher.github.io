@@ -25,7 +25,7 @@
 	function Fullscreen(){
 		var blocks = '.fullscreen';
 		var previousHeight = $(window).height();
-		
+
 		this.preResize = function(){
 			var mainBlock = $(blocks+'[data-ratio="1"]');
 			$(blocks).each(function(){
@@ -75,7 +75,7 @@
 							<li><a href="/#about-section">About</a></li>
 							<li><a href="/#projects-section">Projects</a></li>
 							<li><a href="/#contact-section">Contact</a></li>
-							
+
 						</ul>
 					</div><!--/.nav-collapse -->
 				</div>
@@ -100,11 +100,11 @@
 			</div>
 			<div class="col-md-offset-1 col-md-10 col-xs-12">
 				<h1>About Me</h1>
-				<p>I've developed several apps and paticipated in development of open-source forum engine. I have experience in 
-- PHP5(Symfony2, Yii, Silex, Doctrine2), <br />
-- Javascript(jQuery, Backbone.js, Angular.js, Node.js, Socket.io), <br />
+                <p>I've developed several apps and paticipated in development of open-source forum engine. I have experience in<br />
+- PHP5(Symfony2, Yii, Silex, Doctrine2),<br />
+- Javascript(jQuery, Backbone.js, Angular.js, Node.js, Socket.io),<br />
 - Testing(Cucumber, Gherkin, Jasmine, Behat)<br />
-- Continuous integration (Codeship, TravisCI)<br />
+- Continuous integration(Codeship, TravisCI)<br />
 - Python, Ruby, C++(Qt).
 </p>
 				<p>Currently I'm working on social browser on-line game <a href="http://politiya.ru" target="_blank">Politiya.ru</a></p>
@@ -118,7 +118,7 @@
 				<h2>My Projects</h2>
 			</div>
 		</div>
-		
+
 		<div class="row">
 			<div class="col-md-offset-1 col-md-5 col-xs-12 project animated fadeIn">
 				<img src="images/projects/politiya.game.png" class="center-block img-responsive" />
@@ -194,9 +194,9 @@ $(window).load(function(){
 });
 $(function(){
 	$(window).scroll(function(){
-		var speed = 0.6, 
-			top = $(this).scrollTop(), 
-			y = top*speed, 
+		var speed = 0.6,
+			top = $(this).scrollTop(),
+			y = top*speed,
 			block = $("#welcome-section .parallax"),
 			height = block.height(),
 			opacity = (1 - y/height);
