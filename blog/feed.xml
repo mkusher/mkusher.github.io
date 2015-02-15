@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>/blog</title>
+    <atom:link href="http://mkusher.name/blog//feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://mkusher.name/blog/</link>
+    <description>For all the dots in the codes</description>
+    <pubDate>Sun, 15 Feb 2015 03:00:00 +0300</pubDate>
+    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
+    <language>en</language>
+    <item>
+      <title>Hello World</title>
+      <link>http://mkusher.name/blog//articles/hello-world/</link>
+      <pubDate>Sun, 15 Feb 2015 03:00:00 +0300</pubDate>
+      <guid isPermaLink="true">http://mkusher.name/blog//articles/hello-world/</guid>
+      <author></author>
+      <description>&lt;p&gt;Welcome to your new blog! This is the default blog template with RSS, pagination and an archive. There are other templates available — run &lt;code&gt;wintersmith new --help&lt;/code&gt; to list them.&lt;/p&gt;
+&lt;h2 id=&quot;_repeat-after-me-_-this-is-my-blog-there-are-many-like-it-but-this-one-is-mine-my-blog-is-my-best-friend-it-is-my-life-i-must-master-it-as-i-must-master-my-life-my-blog-without-me-is-useless-without-my-blog-i-am-useless-&quot;&gt;&lt;em&gt;Repeat after me:&lt;/em&gt; This is my blog. There are many like it, but this one is mine. My blog is my best friend. It is my life. I must master it as I must master my life. My blog, without me, is useless. Without my blog, I am useless.&lt;/h2&gt;
+&lt;p&gt;Good, now, the directory structure of your blog is as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;├── config.json               &amp;lt;- site configuration
+├── contents
+│   ├── about.md
+│   ├── archive.json
+│   ├── articles              &amp;lt;– each article has its own directory
+│   │   ├── another-test
+│   │   │   └── index.md
+│   │   ├── bamboo-cutter
+│   │   │   ├── index.md
+│   │   │   └── taketori_monogatari.jpg
+│   │   ├── hello-world
+│   │   │   └── index.md
+│   │   ├── markdown-syntax
+│   │   │   └── index.md
+│   │   └── red-herring
+│   │       ├── banana.png
+│   │       └── index.md
+│   ├── authors               &amp;lt;- author metadata, check author.jade
+│   │   ├── baker.json
+│   │   └── the-wintersmith.json
+│   ├── css
+│   │   └── main.css
+│   └── feed.json
+├── plugins
+│   └── paginator.coffee      &amp;lt;- paginator plugin
+├── templates
+│   ├── archive.jade
+│   ├── article.jade
+│   ├── author.jade
+│   ├── feed.jade
+│   ├── index.jade
+│   └── layout.jade
+└── views
+    └── articles.coffee       &amp;lt;- view that lists articles
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Articles are sorted by date and 3 are shown per page, you can configure this and more in config.json. Check paginator.coffee for all options related to pagination, most plugins also have their own options.&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>
