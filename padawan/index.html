@@ -6,7 +6,10 @@
     </head>
     <body>
         <div id="app" ng-controller="EditorCtrl as editor">
-            <p>Enter some php code. Use enter key to insert entry and tab to select.</p>
+            <div class="top-bar">
+                <p class="help">Enter some php code. Use enter key to insert entry and tab to select.</p>
+                <p class="github-link"><a href="http://github.com/mkusher/padawan.php" target="_blank">See github.com/mkusher/padawan.php</a></p>
+            </div>
             <form id="editor">
                 <textarea id="buffer" ng-model="editor.buffer" ng-change="editor.getEntries($viewValue)" ng-keydown="editor.handleKey($event)"></textarea>
                 <ul id="completion" class="completions-list" ng-show="editor.menu.isActive()">
