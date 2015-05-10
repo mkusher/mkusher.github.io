@@ -27,17 +27,17 @@
             this.block.style.left = left + 'px';
         };
         this.selectNext = function(){
-            if(selectedEntry === 0){
-                entries[entries.length - 1].isSelected = false;
+            if(selectedEntry === undefined){
+                selectedEntry = -1;
             }
             else {
-                entries[selectedEntry - 1].isSelected = false;
+                entries[selectedEntry].isSelected = false;
             }
-            entries[selectedEntry].isSelected = true;
             ++selectedEntry;
             if(selectedEntry >= entries.length){
                 selectedEntry %= entries.length;
             }
+            entries[selectedEntry].isSelected = true;
         };
         this.getSelectedEntry = function(){
             return entries[selectedEntry];
@@ -53,7 +53,7 @@
         };
         this.set = function(list){
             entries = list;
-            selectedEntry = 0;
+            selectedEntry = undefined;
             if(this.isActive()){
                 this.selectNext();
             }
