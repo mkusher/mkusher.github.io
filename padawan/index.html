@@ -1,0 +1,25 @@
+<html ng-app="editorApp">
+    <head>
+        <title>Padawan.php live example</title>
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body>
+        <div id="app" ng-controller="EditorCtrl as editor">
+            <p>Enter some php code. Use enter key to insert entry and tab to select.</p>
+            <form id="editor">
+                <textarea id="buffer" ng-model="editor.buffer" ng-change="editor.getEntries($viewValue)" ng-keydown="editor.handleKey($event)"></textarea>
+                <ul id="completion" class="completions-list" ng-show="editor.menu.isActive()">
+                    <li class="completion-entry" ng-repeat="entry in editor.menu.list()">
+                        <a href="#" ng-click="editor.addEntry(entry)" ng-class="{selected: entry.isSelected}">
+                            <span class="name">{{ entry.name }}</span>
+                            <span class="signature">{{ entry.signature }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular.min.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
